@@ -18,7 +18,11 @@ describe("String#rock_paper_scissors") do
     expect("rock".beats?("scissors")).to(eq("Player 1 wins."))
   end
 
-  it("prompts player to only enter letters and try again in case of false entry") do
+  it("returns prompt to just enter rock paper or scissors w/incorrect submission") do
     expect('xxx'.beats?('yyy')).to(eq("Please just type 'Rock', 'Paper' or 'scissors'."))
+  end
+
+  it("returns correct win if both/either player enters mixcase") do
+    expect("rOcK".beats?("SciSSors")).to(eq("Player 1 wins."))
   end
 end

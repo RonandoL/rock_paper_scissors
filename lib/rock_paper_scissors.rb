@@ -1,6 +1,8 @@
 class String
   define_method(:beats?) do |player_2|
     player_1 = self
+    player_1.downcase!
+    player_2.downcase!
 
     if (player_1 == "rock") && (player_2 == "rock") or
        (player_1 == "paper") && (player_2 == "paper") or
