@@ -8,6 +8,12 @@ class String
       elsif (player_2 == "paper")
         "Paper smothers rock, Player 2 wins."
       end
+    elsif (player_1 == "scissors")
+      if (player_2 == "rock")
+        "Rock crushes Scissors, Player 2 wins."
+      else
+        false
+      end
     else
       false
     end
