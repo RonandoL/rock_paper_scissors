@@ -5,8 +5,8 @@ class String
     if player_1 == "rock"
       if (player_2 == "scissors")
         "Rock crushes Scissors, Player 1 wins."
-      else
-        false
+      elsif (player_2 == "paper")
+        "Paper smothers rock, Player 2 wins."
       end
     else
       false
