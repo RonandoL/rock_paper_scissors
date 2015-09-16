@@ -4,8 +4,10 @@ class String
 
     if (player_1 == "rock") && (player_2 == "rock") or
        (player_1 == "paper") && (player_2 == "paper") or
-       (player_1 == "scissors") && (player_2 == "scissors") 
+       (player_1 == "scissors") && (player_2 == "scissors")
       "Result is a tie, try again."
+    elsif (player_1 == "rock") && (player_2 == "paper")
+      "Paper smothers Rock, Player 2 wins."
     else
       false
     end
