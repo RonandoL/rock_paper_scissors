@@ -18,6 +18,12 @@ class String
       else
         false
       end
+    elsif (player_1 == "paper")
+      if (player_2 == "rock")
+        "Paper smothers rock, Player 1 wins."
+      elsif (player_2 == "scissors")
+        "Scissors cuts paper, Player 2 wins."
+      end
     else
       false
     end
