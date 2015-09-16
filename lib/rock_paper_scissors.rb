@@ -15,9 +15,8 @@ class String
           (player_1 == "scissors") && (player_2 == "paper")
       "Player 1 wins."
     else
-      false
+      "Please just type 'Rock', 'Paper' or 'scissors'."
     end
 
   end
-
 end

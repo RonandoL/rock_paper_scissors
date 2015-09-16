@@ -18,4 +18,7 @@ describe("String#rock_paper_scissors") do
     expect("rock".beats?("scissors")).to(eq("Player 1 wins."))
   end
 
+  it("prompts player to only enter letters and try again in case of false entry") do
+    expect('xxx'.beats?('yyy')).to(eq("Please just type 'Rock', 'Paper' or 'scissors'."))
+  end
 end
