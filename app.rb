@@ -7,8 +7,9 @@ get('/') do
   erb(:index)
 end
 
-get('/score') do
-  @score = params.fetch('score').rock_paper_scissors()  # will receive the input parameters from the 'xyz' field. We'll want that string to be title cased and then displayed on a fresh page.
-  @word = params.fetch('score')
-  erb(:score)
+get('/results') do  # user goes to this URL
+  @player_1 = params.fetch('player_1').capitalize
+  @player_2 = params.fetch('player_2').capitalize
+  @player = params.fetch('player_1').beats?('player_2')  # data from form name field
+  erb(:results_file)  # this is the filename
 end
