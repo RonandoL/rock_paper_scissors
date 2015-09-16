@@ -10,7 +10,12 @@ describe("String#rock_paper_scissors") do
     expect("scissors".beats?("scissors")).to(eq("Result is a tie, try again."))
   end
 
-  it("returns player 2 win with paper argument and rock object") do
-    expect("rock".beats?("paper")).to(eq("Paper smothers Rock, Player 2 wins."))
+  it("returns player 2 win in all player 2 win scenarios") do
+    expect("scissors".beats?("rock")).to(eq("Player 2 wins."))
   end
+
+  it("returns player 1 win in all player 1 win scenarios") do
+    expect("rock".beats?("scissors")).to(eq("Player 1 wins."))
+  end
+
 end
